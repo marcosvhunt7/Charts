@@ -34,6 +34,7 @@
 #import "LineChartFilledViewController.h"
 #import "HalfPieChartViewController.h"
 #import "RealmDemosViewController.h"
+#import "WaterFallChartViewController.h"
 
 @interface DemoListViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -50,6 +51,11 @@
     self.title = @"Charts Demonstration";
 
     self.itemDefs = @[
+                      @{
+                          @"title": @"WaterFall Chart",
+                          @"subtitle": @"A simple demonstration of the linechart.",
+                          @"class": WaterFallChartViewController.class
+                          },
                       @{
                           @"title": @"Line Chart",
                           @"subtitle": @"A simple demonstration of the linechart.",

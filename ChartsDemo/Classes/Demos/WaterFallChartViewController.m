@@ -1,20 +1,17 @@
 //
-//  CandleStickChartViewController.m
+//  WaterFallViewController.m
 //  ChartsDemo
 //
-//  Copyright 2015 Daniel Cohen Gindi & Philipp Jahoda
-//  A port of MPAndroidChart for iOS
-//  Licensed under Apache License 2.0
-//
-//  https://github.com/danielgindi/Charts
+//  Created by Marcos Vinicius da Cunha Brito on 26/10/17.
+//  Copyright © 2017 dcg. All rights reserved.
 //
 
-#import "CandleStickChartViewController.h"
+#import "WaterFallChartViewController.h"
 #import "ChartsDemo-Swift.h"
 
-@interface CandleStickChartViewController () <ChartViewDelegate>
+@interface WaterFallChartViewController () <ChartViewDelegate>
 
-@property (nonatomic, strong) IBOutlet CandleStickChartView *chartView;
+@property (nonatomic, strong) IBOutlet WaterFallChartView *chartView;
 @property (nonatomic, strong) IBOutlet UISlider *sliderX;
 @property (nonatomic, strong) IBOutlet UISlider *sliderY;
 @property (nonatomic, strong) IBOutlet UITextField *sliderTextX;
@@ -22,13 +19,13 @@
 
 @end
 
-@implementation CandleStickChartViewController
+@implementation WaterFallChartViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.title = @"Candle Stick Chart";
+    self.title = @"WaterFall Stick Chart";
     
     self.options = @[
                      @{@"key": @"toggleValues", @"label": @"Toggle Values"},
@@ -40,7 +37,6 @@
                      @{@"key": @"saveToGallery", @"label": @"Save to Camera Roll"},
                      @{@"key": @"togglePinchZoom", @"label": @"Toggle PinchZoom"},
                      @{@"key": @"toggleAutoScaleMinMax", @"label": @"Toggle auto scale min/max"},
-                     @{@"key": @"toggleShadowColorSameAsCandle", @"label": @"Toggle shadow same color"},
                      @{@"key": @"toggleData", @"label": @"Toggle Data"},
                      ];
     
@@ -90,53 +86,43 @@
 
 - (void)setDataCount:(int)count range:(double)range
 {
-    NSMutableArray *yVals1 = [[NSMutableArray alloc] init];
-    
+    NSMutableArray *yVals = [[NSMutableArray alloc] init];
+    NSMutableArray * dataSets = [[NSMutableArray alloc] init];
     for (int i = 0; i < count; i++)
     {
         double mult = (range + 1);
         double val = (double) (arc4random_uniform(40)) + mult;
-        double high = (double) (arc4random_uniform(9)) + 8.0;
-        double low = (double) (arc4random_uniform(9)) + 8.0;
         double open = (double) (arc4random_uniform(6)) + 1.0;
         double close = (double) (arc4random_uniform(6)) + 1.0;
         BOOL even = i % 2 == 0;
-        CandleChartDataEntry *dataEntry = [[CandleChartDataEntry alloc] initWithX:i shadowH:val + high shadowL:val - low open:even ? val + open : val - open close:even ? val - close : val + close icon: [UIImage imageNamed:@"icon"]];
-        [yVals1 addObject:dataEntry];
-    }
+        WaterFallChartDataEntry *dataEntry = [[WaterFallChartDataEntry alloc] initWithX:i open:even ? val + open : val - open close:even ? val - close : val + close icon: [UIImage imageNamed:@"icon"]];
+        [yVals addObject:dataEntry];
         
-    CandleChartDataSet *set1 = [[CandleChartDataSet alloc] initWithValues:yVals1 label:@"Data Set"];
-    set1.axisDependency = AxisDependencyLeft;
-    [set1 setColor:[UIColor colorWithWhite:80/255.f alpha:1.f]];
+        WaterFallChartDataSet *set = [[WaterFallChartDataSet alloc] initWithValues:yVals label:@"Data Set"];
+        set.axisDependency = AxisDependencyLeft;
+        [set setColor:[UIColor colorWithWhite:80/255.f alpha:1.f]];
+        
+        set.drawIconsEnabled = NO;
+        
+        
+        set.decreasingColor = UIColor.redColor;
+        set.decreasingFilled = YES;
+        set.increasingColor = [UIColor colorWithRed:122/255.f green:242/255.f blue:84/255.f alpha:1.f];
+        set.increasingFilled = YES;
+        set.neutralColor = UIColor.blueColor;
+        
+        [dataSets addObject:set];
+    }
     
-    set1.drawIconsEnabled = NO;
     
-    set1.shadowColor = UIColor.darkGrayColor;
-    set1.shadowWidth = 0.7;
-    set1.decreasingColor = UIColor.redColor;
-    set1.decreasingFilled = YES;
-    set1.increasingColor = [UIColor colorWithRed:122/255.f green:242/255.f blue:84/255.f alpha:1.f];
-    set1.increasingFilled = NO;
-    set1.neutralColor = UIColor.blueColor;
     
-    CandleChartData *data = [[CandleChartData alloc] initWithDataSet:set1];
+    WaterFallChartData *data = [[WaterFallChartData alloc] initWithDataSets:dataSets];//[[WaterFallChartData alloc] initWithDataSet:set1];
     
     _chartView.data = data;
 }
 
 - (void)optionTapped:(NSString *)key
 {
-    if ([key isEqualToString:@"toggleShadowColorSameAsCandle"])
-    {
-        for (id<ICandleChartDataSet> set in _chartView.data.dataSets)
-        {
-            set.shadowColorSameAsCandle = !set.shadowColorSameAsCandle;
-        }
-        
-        [_chartView notifyDataSetChanged];
-        return;
-    }
-    
     [super handleOption:key forChartView:_chartView];
 }
 

@@ -84,6 +84,8 @@
 		5BEAED3C1ABC199F0013F194 /* ColoredLineChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEAED3A1ABC199F0013F194 /* ColoredLineChartViewController.xib */; };
 		5BEAED401ABC1AC60013F194 /* SinusBarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEAED3E1ABC1AC60013F194 /* SinusBarChartViewController.m */; };
 		5BEAED411ABC1AC60013F194 /* SinusBarChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEAED3F1ABC1AC60013F194 /* SinusBarChartViewController.xib */; };
+		D822D3541FA24C44008B3846 /* WaterFallChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D822D3521FA24C44008B3846 /* WaterFallChartViewController.m */; };
+		D822D3571FA24FE7008B3846 /* WaterFallChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D822D3561FA24CFD008B3846 /* WaterFallChartViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +236,9 @@
 		5BEAED3D1ABC1AC60013F194 /* SinusBarChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinusBarChartViewController.h; sourceTree = "<group>"; };
 		5BEAED3E1ABC1AC60013F194 /* SinusBarChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinusBarChartViewController.m; sourceTree = "<group>"; };
 		5BEAED3F1ABC1AC60013F194 /* SinusBarChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinusBarChartViewController.xib; sourceTree = "<group>"; };
+		D822D3511FA24C44008B3846 /* WaterFallChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFallChartViewController.h; sourceTree = "<group>"; };
+		D822D3521FA24C44008B3846 /* WaterFallChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFallChartViewController.m; sourceTree = "<group>"; };
+		D822D3561FA24CFD008B3846 /* WaterFallChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaterFallChartViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +439,9 @@
 				5BEAED181ABBFB340013F194 /* StackedBarChartViewController.h */,
 				5BEAED191ABBFB340013F194 /* StackedBarChartViewController.m */,
 				5BEAED1A1ABBFB340013F194 /* StackedBarChartViewController.xib */,
+				D822D3511FA24C44008B3846 /* WaterFallChartViewController.h */,
+				D822D3521FA24C44008B3846 /* WaterFallChartViewController.m */,
+				D822D3561FA24CFD008B3846 /* WaterFallChartViewController.xib */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -572,6 +580,7 @@
 				5BDEDC481ABB871E007D3A60 /* CombinedChartViewController.xib in Resources */,
 				5B4316371AB8D8B70009FCAA /* Default-736h@3x.png in Resources */,
 				5BE673951D5B4E0900A87BA2 /* LineChartTimeViewController.xib in Resources */,
+				D822D3571FA24FE7008B3846 /* WaterFallChartViewController.xib in Resources */,
 				5B4316291AB8D8AE0009FCAA /* Icon-40@2x.png in Resources */,
 				5BEAED1E1ABBFB340013F194 /* StackedBarChartViewController.xib in Resources */,
 				5B4316271AB8D8AE0009FCAA /* Icon-29@2x.png in Resources */,
@@ -601,6 +610,7 @@
 				5BE377DE1D425151006EB34F /* DayAxisValueFormatter.m in Sources */,
 				5BEAED401ABC1AC60013F194 /* SinusBarChartViewController.m in Sources */,
 				5BE7E7621C693098000A0377 /* PositiveNegativeBarChartViewController.m in Sources */,
+				D822D3541FA24C44008B3846 /* WaterFallChartViewController.m in Sources */,
 				5B613DB31D526DED000F1E98 /* RadarMarkerView.swift in Sources */,
 				5BEAED251ABC0BE20013F194 /* MultipleBarChartViewController.m in Sources */,
 				5B57BBB81A9B26AA0036A6CC /* AppDelegate.m in Sources */,

@@ -125,6 +125,13 @@
 		D326491E8BCDE54A0921E137 /* ChartHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5983826927D825EF5F855C28 /* ChartHighlighter.swift */; };
 		D50B0EC2BB2245F32E757C50 /* CandleChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E698FF540029B70AC97AD7 /* CandleChartDataEntry.swift */; };
 		D819331DA581C7E0AC5F8CEF /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3976E5F9D60E30CD94CE6156 /* Animator.swift */; };
+		D822D34A1FA2480F008B3846 /* WaterFallChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822D3491FA2480F008B3846 /* WaterFallChartView.swift */; };
+		D822D35B1FA2535C008B3846 /* WaterFallChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822D35A1FA2535B008B3846 /* WaterFallChartRenderer.swift */; };
+		D822D35F1FA25788008B3846 /* IWaterFallChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822D35E1FA25788008B3846 /* IWaterFallChartDataSet.swift */; };
+		D822D3611FA2581C008B3846 /* WaterFallChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822D3601FA2581C008B3846 /* WaterFallChartDataProvider.swift */; };
+		D822D3651FA258A9008B3846 /* WaterFallChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822D3621FA258A8008B3846 /* WaterFallChartDataSet.swift */; };
+		D822D3661FA258A9008B3846 /* WaterFallChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822D3631FA258A8008B3846 /* WaterFallChartDataEntry.swift */; };
+		D822D3671FA258A9008B3846 /* WaterFallChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822D3641FA258A9008B3846 /* WaterFallChartData.swift */; };
 		DBC9DB402CC9BB84B76968C4 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = B137428B41C143D5115726C4 /* Description.swift */; };
 		DDE704689FDF2C0E0338488B /* CandleChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4785FEACAE4367F36FB8868 /* CandleChartData.swift */; };
 		DE0F434FE8C24C52B023370F /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF475B9593B9898853814340 /* Transformer.swift */; };
@@ -282,6 +289,13 @@
 		D2E1819D72CD7B6C4A4E8048 /* LineChartTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineChartTests.swift; path = Tests/Charts/LineChartTests.swift; sourceTree = "<group>"; };
 		D2E698FF540029B70AC97AD7 /* CandleChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/CandleChartDataEntry.swift; sourceTree = "<group>"; };
 		D6C1BEFDF17404666C7B6054 /* DefaultFillFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultFillFormatter.swift; path = Source/Charts/Formatters/DefaultFillFormatter.swift; sourceTree = "<group>"; };
+		D822D3491FA2480F008B3846 /* WaterFallChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WaterFallChartView.swift; path = Source/Charts/Charts/WaterFallChartView.swift; sourceTree = "<group>"; };
+		D822D35A1FA2535B008B3846 /* WaterFallChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterFallChartRenderer.swift; path = Source/Charts/Renderers/WaterFallChartRenderer.swift; sourceTree = "<group>"; };
+		D822D35E1FA25788008B3846 /* IWaterFallChartDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IWaterFallChartDataSet.swift; path = Source/Charts/Data/Interfaces/IWaterFallChartDataSet.swift; sourceTree = "<group>"; };
+		D822D3601FA2581C008B3846 /* WaterFallChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterFallChartDataProvider.swift; path = Source/Charts/Interfaces/WaterFallChartDataProvider.swift; sourceTree = "<group>"; };
+		D822D3621FA258A8008B3846 /* WaterFallChartDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterFallChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/WaterFallChartDataSet.swift; sourceTree = "<group>"; };
+		D822D3631FA258A8008B3846 /* WaterFallChartDataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterFallChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/WaterFallChartDataEntry.swift; sourceTree = "<group>"; };
+		D822D3641FA258A9008B3846 /* WaterFallChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterFallChartData.swift; path = Source/Charts/Data/Implementations/Standard/WaterFallChartData.swift; sourceTree = "<group>"; };
 		DA2AA6CC89F809DCCD7605B4 /* IPieChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPieChartDataSet.swift; path = Source/Charts/Data/Interfaces/IPieChartDataSet.swift; sourceTree = "<group>"; };
 		DD8ED233775EEC31243A6919 /* BubbleChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/BubbleChartDataEntry.swift; sourceTree = "<group>"; };
 		DFB762958EE8E6521563665D /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartAnimationEasing.swift; path = Source/Charts/Animation/ChartAnimationEasing.swift; sourceTree = "<group>"; };
@@ -337,6 +351,7 @@
 				A140F644332704916947B58C /* CombinedChartDataProvider.swift */,
 				BFABD027DAF6851088F002AC /* LineChartDataProvider.swift */,
 				2FD37A55B4D85D883E29C744 /* ScatterChartDataProvider.swift */,
+				D822D3601FA2581C008B3846 /* WaterFallChartDataProvider.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -459,6 +474,9 @@
 				B1BA6B21CBDF77A15848994F /* RadarChartDataSet.swift */,
 				E7AD2FC320A16CA1EE0A52F4 /* ScatterChartData.swift */,
 				CB1DD1A0F64266A10EE94194 /* ScatterChartDataSet.swift */,
+				D822D3641FA258A9008B3846 /* WaterFallChartData.swift */,
+				D822D3631FA258A8008B3846 /* WaterFallChartDataEntry.swift */,
+				D822D3621FA258A8008B3846 /* WaterFallChartDataSet.swift */,
 			);
 			name = Standard;
 			sourceTree = "<group>";
@@ -502,6 +520,7 @@
 				4A6C9631C69B2D772BBD9232 /* PieRadarChartViewBase.swift */,
 				2440DB759AB93B4A928A3F6F /* RadarChartView.swift */,
 				18462BFDD9DEE76D51D40503 /* ScatterChartView.swift */,
+				D822D3491FA2480F008B3846 /* WaterFallChartView.swift */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -602,6 +621,7 @@
 				DA2AA6CC89F809DCCD7605B4 /* IPieChartDataSet.swift */,
 				2EAD807534620E3B53327F04 /* IRadarChartDataSet.swift */,
 				219BC9CEA037F897E92E45D1 /* IScatterChartDataSet.swift */,
+				D822D35E1FA25788008B3846 /* IWaterFallChartDataSet.swift */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -623,6 +643,7 @@
 				923206233CA89FD03565FF87 /* LineScatterCandleRadarRenderer.swift */,
 				46D8013D44629521B1746364 /* PieChartRenderer.swift */,
 				7AC9C3D69ACB5BDE22421E15 /* RadarChartRenderer.swift */,
+				D822D35A1FA2535B008B3846 /* WaterFallChartRenderer.swift */,
 				6F66B32AD8A878CBD6DB6ED2 /* Renderer.swift */,
 				F7059584CB30EF419CFB3335 /* Scatter */,
 				80D5B764EC0AE1E17E55DC67 /* ScatterChartRenderer.swift */,
@@ -837,7 +858,9 @@
 				DDE704689FDF2C0E0338488B /* CandleChartData.swift in Sources */,
 				D50B0EC2BB2245F32E757C50 /* CandleChartDataEntry.swift in Sources */,
 				383D68A13E1C3D6A251E5147 /* CandleChartDataSet.swift in Sources */,
+				D822D3671FA258A9008B3846 /* WaterFallChartData.swift in Sources */,
 				81892994002C0640AD858748 /* ChartData.swift in Sources */,
+				D822D35F1FA25788008B3846 /* IWaterFallChartDataSet.swift in Sources */,
 				EAEA60D22CA8C1B7E18D3F7D /* ChartDataEntry.swift in Sources */,
 				7D546013F3A14FF5BB7F3294 /* ChartDataEntryBase.swift in Sources */,
 				66A18A8EEBAAAC2EDA31ABEC /* ChartDataSet.swift in Sources */,
@@ -845,11 +868,13 @@
 				C04D269AD4A373FD2B621C43 /* LineChartData.swift in Sources */,
 				95B6D6F35684292A62DBEA74 /* LineChartDataSet.swift in Sources */,
 				7CB7F74752619B0270CCB0A9 /* LineRadarChartDataSet.swift in Sources */,
+				D822D3651FA258A9008B3846 /* WaterFallChartDataSet.swift in Sources */,
 				FA07D034D9C3BC7795184ACA /* LineScatterCandleRadarChartDataSet.swift in Sources */,
 				2C879FC24D7A15D70BE4063F /* PieChartData.swift in Sources */,
 				23649EFC635A76022F07FFA6 /* PieChartDataEntry.swift in Sources */,
 				B539114951455C35BADAE3F3 /* PieChartDataSet.swift in Sources */,
 				0C52C70C6E6EA09BD7426386 /* RadarChartData.swift in Sources */,
+				D822D35B1FA2535C008B3846 /* WaterFallChartRenderer.swift in Sources */,
 				C2EFB4EC8C97FA9987F1B50D /* RadarChartDataEntry.swift in Sources */,
 				E3B28EA1E21279DF3889BCE8 /* RadarChartDataSet.swift in Sources */,
 				2B791E64E7C4523B1A63F72A /* ScatterChartData.swift in Sources */,
@@ -859,6 +884,7 @@
 				2C40CFFC8D88BEA70E0A50B0 /* IBubbleChartDataSet.swift in Sources */,
 				0D8A89398F9BD5DCC8D7F976 /* ICandleChartDataSet.swift in Sources */,
 				E8F0F4F47CD7D72B4EE5A794 /* IChartDataSet.swift in Sources */,
+				D822D34A1FA2480F008B3846 /* WaterFallChartView.swift in Sources */,
 				F941C88BF814DF51C465CB95 /* ILineChartDataSet.swift in Sources */,
 				1311BEC21E9CC264E971EFAF /* ILineRadarChartDataSet.swift in Sources */,
 				146EE16342C2BADC92E45BF2 /* ILineScatterCandleRadarChartDataSet.swift in Sources */,
@@ -881,12 +907,14 @@
 				203A39685CC96FC625F616E4 /* IHighlighter.swift in Sources */,
 				73EDF662AD989E930D365B72 /* PieHighlighter.swift in Sources */,
 				3097296AC7FFA994FE4AD312 /* PieRadarHighlighter.swift in Sources */,
+				D822D3611FA2581C008B3846 /* WaterFallChartDataProvider.swift in Sources */,
 				C33E1AF5471A60BA42DAF52E /* RadarHighlighter.swift in Sources */,
 				9C91C151608E2D6E19B1EAD1 /* Range.swift in Sources */,
 				00BC23EF0E04E17188344403 /* BarChartDataProvider.swift in Sources */,
 				28FEE609C5B22FD64C7E5D10 /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */,
 				4272DA5D44AF7DA05A5A8287 /* BubbleChartDataProvider.swift in Sources */,
 				30DCC4BAA5601B154ABADA13 /* CandleChartDataProvider.swift in Sources */,
+				D822D3661FA258A9008B3846 /* WaterFallChartDataEntry.swift in Sources */,
 				FD37AAC0270F390FFC470A65 /* ChartDataProvider.swift in Sources */,
 				65EA404AE098EBCE8D5DE04B /* CombinedChartDataProvider.swift in Sources */,
 				2BA03CEC36BADCF682F1328B /* LineChartDataProvider.swift in Sources */,
